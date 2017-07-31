@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Carpe Keyboards</title>
+    <link>http://carpekeyboards.com/</link>
+    <description>Recent content on Carpe Keyboards</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://carpekeyboards.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JD45 Reference</title>
+      <link>http://carpekeyboards.com/reference/jd45/</link>
+      <pubDate>Wed, 26 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://carpekeyboards.com/reference/jd45/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://carpekeyboards.com/img/jd45/01_jd45.png&#34; width=&#34;100%&#34; style=&#34;max-width:900px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>http://carpekeyboards.com/support/</link>
+      <pubDate>Wed, 26 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://carpekeyboards.com/support/</guid>
+      <description>Have questions about this group buy?  Please ask questions about this group buy in the GeekHack Group Buy thread.   Have a question about your order?  Please respond to the order confirmation email you were sent, this helps us easly reference your order.   Having problems with the website?  Please PM jdcarpe and swill to work through any technical issues.   Thank you for your interest!</description>
+    </item>
+    
+    <item>
+      <title>JD40 Reference</title>
+      <link>http://carpekeyboards.com/reference/jd40/</link>
+      <pubDate>Tue, 25 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://carpekeyboards.com/reference/jd40/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://carpekeyboards.com/img/jd40/01_jd40.png&#34; width=&#34;100%&#34; style=&#34;max-width:900px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

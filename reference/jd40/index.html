@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JD40 Reference</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="http://carpekeyboards.com/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://carpekeyboards.com/css/style.css">
+    <script type="text/javascript" src="http://carpekeyboards.com/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://carpekeyboards.com/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://carpekeyboards.com/" class="navbar-brand">Carpe Keyboards</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+
+          <ul class="nav navbar-nav"></ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://carpekeyboards.com/reference/jd45/"><i class="glyphicon glyphicon-cog"></i> JD45 Reference</a></li>
+            <li><a href="http://carpekeyboards.com/reference/jd40/"><i class="glyphicon glyphicon-cog"></i> JD40 Reference</a></li>
+            <li><a href="http://carpekeyboards.com/support/"><i class="glyphicon glyphicon-question-sign"></i> Support</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+	
+<div class="row pad-top">
+  <div class="col-xs-12">
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">JD40 Reference</h3>
+      </div>
+      <div class="panel-body">
+        <p><img src="http://carpekeyboards.com/img/jd40/01_jd40.png" width="100%" style="max-width:900px" /></p>
+
+<p></p>
+
+<p><em>JD40 Default Programming Reference</em></p>
+
+<p><a href="https://www.dropbox.com/s/atspqamvm77z4yf/jd40_default.hex?dl=0">Default firmware .hex file</a></p>
+
+<p><br /><br /></p>
+
+<h3 id="programming-guide-for-windows">PROGRAMMING GUIDE for Windows</h3>
+
+<p>Step 1: <a href="https://www.python.org/downloads/">Download Python</a> and install.</p>
+
+<p>Step 2: <a href="http://www.atmel.com/tools/FLIP.aspx">Download Atmel FLIP</a> and install.</p>
+
+<p>Step 3: Download metalliqaz&rsquo; excellent Easy AVR USB Keyboard Firmware and Keymapper, with the additions for the JD40 Mk.II by MajorKoos. For the JD40 Mk.II, you&rsquo;ll definitely want the Python version, not the compiled Windows installer. <a href="https://www.dropbox.com/s/0b88buvl5sbluum/EasyAVR-master-MajorKoos.zip?dl=0">Download the package here</a>.</p>
+
+<p>Step 4: Start Easy AVR by executing the run.bat script. Select File&gt;New Default Layout&hellip;, and select JD40 MkII (Carpe Keyboards). Alternately, you can use my saved default layout, which you can <a href="https://www.dropbox.com/s/oaqecfwnsrlq72u/jd40_default.dat?dl=0">download from here</a>, by choosing File&gt;Open Saved Layout&hellip;</p>
+
+<p>Step 5: Modify the keymap to suit your preferences.</p>
+
+<p>Step 6: Save your new layout by choosing File&gt;Save Layout As&hellip;</p>
+
+<p>Step 7: Build the firmware .hex file by choosing File&gt;Build Firmware&hellip;</p>
+
+<p>Step 8: Open the Atmel FLIP application you installed previously</p>
+
+<p>Step 9: Connect the JD40 keyboard to your PC via USB. Windows should install the drivers automatically.</p>
+
+<p>Step 10: Press the small button switch on the back of the PCB (accessible via the hole in the case) to jump into bootloader mode. At this point, Windows may or may not install the correct drivers for the device.</p>
+
+<p>Step 10a: If necessary, manually install the driver for the bootloader from C:\Program Files (x86)\Atmel\Flip 3.4.7\usb (or wherever you installed FLIP. Open Device Manager, double click on the device, and select the Driver tab. Click Update Driver, and point it at the &lsquo;usb&rsquo; folder mentioned above.</p>
+
+<p>Step 11: In FLIP, select File&gt;Load Hex File&hellip; and select the firmware you just built with Easy AVR.</p>
+
+<p>Step 12: Click the IC icon, and select ATmega32U4. Click OK.</p>
+
+<p>Step 13: Click the USB icon, and select USB. In the USB Port Connection window, click Open. If an error occurs, the correct driver is not installed. See Step 10a.</p>
+
+<p>Step 14: Click the Run button on the bottom left. The software should now erase the flash on your chip, program the new firmware to flash, and verify the programming.</p>
+
+<p>Step 15: Disconnect the keyboard from the PC.</p>
+
+<p>Step 16: Connect your JD40 keyboard via USB again, and verify that the new firmware programming is correct. I recommend the useful <a href="https://www.dropbox.com/s/859r0v0d0zwfk8u/AquaKeyTest.exe?dl=0">Aqua&rsquo;s Key Test</a> application for this.</p>
+
+<p>Step 17: Enjoy your feeling!</p>
+
+<p><br /><br /></p>
+
+<h3 id="programming-guide-for-linux">PROGRAMMING GUIDE for Linux</h3>
+
+<p><strong>(courtesy of &ldquo;the M&rdquo;)</strong></p>
+
+<p><em>Tested to work with Debian/Ubuntu. For other distros, you may need to download and install packages manually, or revise commands for use with your package manager.</em></p>
+
+<p>Step 1: Install python with<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo apt-get install python</code></p>
+
+<p>Step 2: Download EasyAVR - <a href="https://deskthority.net/wiki/Easy_AVR_USB_Keyboard_Firmware">Info here</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>wget -O easyavr.zip https://www.dropbox.com/s/0b88buvl5sbluum/EasyAVR-master-MajorKoos.zip</code></p>
+
+<p>Step 3: Unpack and adjust Easy AVR<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>unzip easyavr.zip # Creates a Directory ./EasyAVR-master</code><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>cd EasyAVR-master</code><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>chmod u+x easykeymap.sh</code></p>
+
+<p>Step 4: Call Easy AVR<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>./easykeymap.sh</code></p>
+
+<p>Step 5: Generate a new default keymap<br />
+&nbsp;&nbsp;&nbsp;&nbsp;File -&gt; New Default Layout -&gt; JD45 (Carpe Keyboards) [ <All Keys> ]</p>
+
+<p>Step 6: Edit your keymap; Help is found in the &ldquo;Help&rdquo; Menu of EasyAVR</p>
+
+<p>Step 7: Build the firmware from it:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;File -&gt; Build Firmware -&gt; &ldquo;mynewfirmware.hex&rdquo;</p>
+
+<p>Step 8: Install dfu-programmer:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo apt-get install dfu-programmer</code></p>
+
+<p>Step 9: Connect your JD45 keyboard to your computer and press the little button at the buttom while it is connected. You will see something like</p>
+
+<pre><code>  ... usb 1-4: New USB device found, idVendor=03eb, idProduct=2ff4
+  ... usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+  ... usb 1-4: Product: ATm32U4DFU
+  ... usb 1-4: Manufacturer: ATMEL
+  ... usb 1-4: SerialNumber: 1.0.0
+</code></pre>
+
+<p>in your syslog.</p>
+
+<p>Step 10: Erase and upload<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo dfu-programmer atmega32u4 erase --debug 5</code><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<code>sudo dfu-programmer atmega32u4 flash mynewfirmware.hex --debug 5</code></p>
+
+<p>Step 11: Disconnect and reconnect your JD45 keyboard. It will work with the new layout now.</p>
+
+<p><em>Note 1: Please adapt file names to your needs.</em><br />
+<em>Note 2: The default firmware at your board is lost. I did not find a way to save it. dfu-programmer dump did not work.</em><br />
+<em>Note 3: The default firmware offered above is NOT identical with the firmware preinstalled at the keyboard. However it works fine also. The preinstalled firmware is really lost. As I didn&rsquo;t really like it, this was no problem for me.</em><br />
+<em>Note 4: I didn&rsquo;t need FLIP or Teensy that are mentioned in most other guides. I couldn&rsquo;t install them anyway.</em></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="http://carpekeyboards.com/reference/jd45/">JD45 Reference</a></li>
+              <li><a href="http://carpekeyboards.com/reference/jd40/">JD40 Reference</a></li>
+              <li><a href="http://carpekeyboards.com/support/">Support</a></li>
+            </ul>
+            <p>Website built with <i class="glyphicon glyphicon-heart"></i> by <a href="http://swillkb.com" target="_blank">swill</a></p>
+        </div>
+
+      </footer>
+      
+    </div>
+
+</body>
+</html>
