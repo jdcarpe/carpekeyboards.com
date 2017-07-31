@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ range .Data.Pages }}
+    <div class="row pad-top">
+      <div class="col-xs-12">
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ .Title }}</h3>
+          </div>
+          <div class="panel-body" style="text-align:center;">
+            {{ .Summary }}
+            <div>
+              <a href="{{ .Permalink }}" class="btn btn-lg btn-success">Go to {{ .Title }}</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
