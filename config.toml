@@ -1,0 +1,5 @@
+baseURL = "http://carpekeyboards.com/"
+languageCode = "en-us"
+title = "Carpe Keyboards"
+theme = "CarpeKeyboards"
+canonifyurls = true
